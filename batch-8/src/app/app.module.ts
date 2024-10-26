@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
@@ -20,7 +21,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     DepartmentComponent,
     DashboardComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, RouterLink, RouterLinkActive],
   providers: [],
   bootstrap: [AppComponent],
 })
