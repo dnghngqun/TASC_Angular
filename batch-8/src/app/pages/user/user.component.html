@@ -1,3 +1,69 @@
-<p>
-  user works!
-</p>
+
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0">Dashboard</h1>
+        </div>
+        <!-- /.col -->
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">Dashboard v1</li>
+          </ol>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Email</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Avatar</th>
+                <th scope="col">Action</th>
+                <th scope="col">
+                  <button
+                    type="button"
+                    class="btn btn-success"
+                    routerLink="/user/create"
+                  >
+                    Add
+                  </button>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of listUser">
+                <td scope="row">{{ item.id }}</td>
+                <td scope="row">{{ item.email }}</td>
+                <td scope="row">{{ item.first_name }}</td>
+                <td scope="row">{{ item.last_name }}</td>
+                <td scope="row">
+                  <img src="{{ item.avatar }}" alt="" />
+                </td>
+                <td scope="row d-flex">
+                  <button type="button" class="btn btn-primary">View</button>
+                  <button type="button" class="btn btn-primary">Edit</button>
+                  <button type="button" class="btn btn-primary">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+
+  <!-- Main content -->
+
+  <!-- /.content -->
+</div>
